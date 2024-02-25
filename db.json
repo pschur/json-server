@@ -1,14 +1,77 @@
 {
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    "comments": [
+        {
+            "id": 1,
+            "user_id": 1,
+            "post_id": 1,
+            "body": "This is the first comment.",
+            "created_at": "2018-01-01 00:00:00",
+            "updated_at": "2018-01-01 00:00:00"
+        },
+        {
+            "id": 2,
+            "user_id": 2,
+            "post_id": 2,
+            "body": "This is the second comment.",
+            "created_at": "2018-01-01 00:00:00",
+            "updated_at": "2018-01-01 00:00:00"
+        },
+        {
+            "id": 3,
+            "user_id": 2,
+            "post_id": 1,
+            "body": "This is the third comment.",
+            "created_at": "2018-01-01 00:00:00",
+            "updated_at": "2018-01-01 00:00:00"
+        }
+    ],
+    "posts": [
+        {
+            "id": 1,
+            "user_id": 1,
+            "title": "Hello, World!",
+            "body": "This is the first post.",
+            "created_at": "2018-01-01 00:00:00",
+            "updated_at": "2018-01-01 00:00:00"
+        },
+        {
+            "id": 2,
+            "user_id": 1,
+            "title": "Hello, Again!",
+            "body": "This is the second post.",
+            "created_at": "2018-01-01 00:00:00",
+            "updated_at": "2018-01-01 00:00:00"
+        },
+        {
+            "id": 3,
+            "user_id": 1,
+            "title": "Hello, Once More!",
+            "body": "This is the third post.",
+            "created_at": "2018-01-01 00:00:00",
+            "updated_at": "2018-01-01 00:00:00"
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    },
+    "users": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "email": "john.doe@example.com",
+            "password": "password",
+            "role": "admin",
+            "created_at": "2018-01-01 00:00:00",
+            "updated_at": "2018-01-01 00:00:00"
+        },
+        {
+            "id": 2,
+            "name": "Jane Doe",
+            "email": "jane.doe@example.com",
+            "password": "password",
+            "role": "user",
+            "created_at": "2018-01-01 00:00:00",
+            "updated_at": "2018-01-01 00:00:00"
+        }
+    ]
 }

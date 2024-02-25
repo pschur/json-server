@@ -1,0 +1,13 @@
+#! /usr/env/bin php
+<?php
+
+$files = glob(__DIR__ . '/data/*.php');
+
+$db = [];
+
+foreach ($files as $file) {
+    $data = require $file;
+    $db[basename($file, '.php')] = $data;
+}
+
+file_put_contents(__DIR__ . '/db.json', json_encode($db, JSON_PRETTY_PRINT));
