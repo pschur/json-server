@@ -11,3 +11,12 @@ foreach ($files as $file) {
 }
 
 file_put_contents(__DIR__ . '/db.json', json_encode($db, JSON_PRETTY_PRINT));
+
+echo 'db.json has been updated.'.PHP_EOL;
+
+if ($argc > 1 && $argv[1] === 'push') {
+    chdir(__DIR__);
+    echo shell_exec('git add *');
+    echo shell_exec('git commit -m "Update db.json ['.date('Y-m-d H:i:s').']"');
+    echo shell_exec('git push');
+}
